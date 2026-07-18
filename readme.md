@@ -1,6 +1,6 @@
 # 📱 Lista de Usuarios desde API - React Native + Expo
 
-Una app hecha con React Native y Expo que consume la API pública de [reqres.in](https://reqres.in) para mostrar una lista de usuarios.
+Una app hecha con React Native y Expo que consume la API pública de [Devs API Hub](https://devsapihub.com/docs/api-users) para mostrar una lista de usuarios.
 
 ## 📸 Vista previa
 <img src="demo.png" alt="Resultado Final" width="300"/>
@@ -15,8 +15,8 @@ Una app hecha con React Native y Expo que consume la API pública de [reqres.in]
 
 ## 🔧 Funcionalidades
 
-- Llama a `https://reqres.in/api/users?page=2` al iniciar la app.
-- Muestra una lista de tarjetas (Cards) con nombre, correo e imagen del usuario.
+- Llama a `https://devsapihub.com/api-users` al iniciar la app.
+- Muestra una lista de tarjetas (Cards) con nombre, correo, ubicación, estado de conexión e imagen del usuario.
 - Indicador de carga mientras se obtiene la información.
 - Diseño responsive usando Flexbox y React Native Paper.
 
