@@ -10,7 +10,9 @@ export const styles = StyleSheet.create({
     card: {
         marginBottom: 15,
         borderRadius: 12,
-        elevation: 3,
+        elevation: 0,
+        shadowOpacity: 0,
+        shadowColor: 'transparent',
     },
     cardContent: {
         flexDirection: 'row',
@@ -31,5 +33,22 @@ export const styles = StyleSheet.create({
     },
     email: {
         color: '#777',
+    },
+    location: {
+        color: '#777',
+        fontSize: 12,
+        marginTop: 2,
+    },
+    online: {
+        color: '#2e7d32',
+        fontSize: 12,
+        marginTop: 4,
+        fontWeight: 'bold',
+    },
+    offline: {
+        color: '#c62828',
+        fontSize: 12,
+        marginTop: 4,
+        fontWeight: 'bold',
     },
 });

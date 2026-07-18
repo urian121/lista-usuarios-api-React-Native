@@ -13,14 +13,14 @@ export default function App() {
    */
   const getUsers = async () => {
     try {
-      const res = await fetch('https://reqres.in/api/users?page=2');
+      const res = await fetch('https://devsapihub.com/api-users');
       // Verifica si la respuesta es exitosa
       if (!res.ok) {
         throw new Error('Error en la respuesta de la API');
       }
 
       const data = await res.json(); // Convierte la respuesta a JSON
-      setUsuarios(data.data); // Actualiza el estado con los usuarios obtenidos
+      setUsuarios(data); // Actualiza el estado con los usuarios obtenidos
     } catch (error) {
       console.error('Error al obtener los usuarios:', error);
     } finally {
@@ -37,14 +37,20 @@ export default function App() {
    * Función para renderizar un usuario
    */
   const renderUser = (item) => (
-    <Card key={item.id.toString()} style={styles.card} mode="elevated">
+    <Card key={item.id.toString()} style={styles.card} mode="contained">
       <Card.Content style={styles.cardContent}>
-        <Image source={{ uri: item.avatar }} style={styles.avatar} />
+        <Image source={{ uri: item.avatar_url }} style={styles.avatar} />
         <View style={styles.userInfo}>
           <Text variant="titleMedium" style={styles.name}>
-            {item.first_name} {item.last_name}
+            {item.name}
           </Text>
           <Text style={styles.email}>{item.email}</Text>
+          <Text style={styles.location}>
+            {item.location.city}, {item.location.country}
+          </Text>
+          <Text style={item.online ? styles.online : styles.offline}>
+            {item.online ? 'En línea' : 'Desconectado'}
+          </Text>
         </View>
       </Card.Content>
     </Card>
